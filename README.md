@@ -1,9 +1,24 @@
 # Portfolio VR 🕶️🤖
 
-## 🌐 Step into the Future: Our Virtual Reality Portfolio 🚀
-Welcome to a world where imagination meets innovation. This portfolio showcases our journey through immersive experiences, interactive environments, and boundary-pushing VR creations that redefine how we connect, learn, and play. From concept to creation, every project is a portal to possibility—crafted to captivate, challenge, and inspire✨.
+## Problem 🤔
+* 🌎Limited Reach
+* 😐Low Engagement and Interaction
+* 👀Hard to Present 3D Work
+* 💡Lack Innovation and Not Attention Grabbing
 
-##  Tools Used 🛠️
-* Blender 
-* Substance Painter
-* Unity
+## Objectives 🎯
+* 💪Showcase our Skills through Building Untraditional Project
+* 🔮Create an immersive environment and experience
+* 🗣️Enhance Story Telling
+* 🌎Reach Global Audience
+
+## Tools 🛠️
+* ⛏️ **Blender** ➡️ 3D Modeling, Sculpting and Assets Creation 
+* 🎨 **Substance Painter** ➡️ Texturing and Material Creation
+* 🎮 **Unity** ➡️ Create a Real-time VR Environment with Realistic Lightening and Immersive Interactions
+
+## Outcomes 🥇
+* 🗂️ Building Outstanding Portfolio Project
+* 🚀Enhancing our Technical Skills through Experimentation 
+* 🛜 Building Connections In Niche Market
+* 👩🏻‍💻Land Freelancing Opportunities
