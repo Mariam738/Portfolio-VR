@@ -14077,9 +14077,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d157bae81ae934a40b8986961658ce69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ModesManager
-  player: {fileID: 0}
-  tourGuide: {fileID: 163135466}
-  uiCanvas: {fileID: 584561987}
 --- !u!4 &1425249807
 Transform:
   m_ObjectHideFlags: 0

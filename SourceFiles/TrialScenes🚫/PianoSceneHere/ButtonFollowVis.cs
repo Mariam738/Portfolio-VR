@@ -1,0 +1,88 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;   
+
+public class ButtonFollowVis : MonoBehaviour
+{
+    public Transform visualTarget;
+    public Vector3 localAxis;
+    public float resetSpeed = 5;
+    public float followAngleThreshold = 45f;
+
+    private bool freeze = false;
+ 
+    private Vector3 initialLocalPos;
+
+    private Vector3 offset;
+    private Transform pokeAttachTransform;
+
+    private UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable interactable;
+    private bool isFollowing = false;
+
+    void Start()
+    {
+        initialLocalPos = visualTarget.localPosition;
+
+        interactable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRBaseInteractable>();
+        interactable.hoverEntered.AddListener(Follow);
+        interactable.hoverExited.AddListener(Reset);
+        interactable.selectEntered.AddListener(Freeze);
+    }
+
+    public void Follow(BaseInteractionEventArgs hover)
+    {
+        if (hover.interactorObject is UnityEngine.XR.Interaction.Toolkit.Interactors.XRPokeInteractor)
+        {
+            UnityEngine.XR.Interaction.Toolkit.Interactors.XRPokeInteractor interactor = (UnityEngine.XR.Interaction.Toolkit.Interactors.XRPokeInteractor)hover.interactorObject;
+
+            pokeAttachTransform = interactor.attachTransform;
+            offset = visualTarget.position - pokeAttachTransform.position;
+
+            float pokeAngele = Vector3.Angle(offset, visualTarget.TransformDirection(localAxis));
+
+            if(pokeAngele < followAngleThreshold)
+            {
+                isFollowing = true;
+                freeze = false;
+            }
+        }
+    }
+
+    public void Reset(BaseInteractionEventArgs hover)
+    {
+        if (hover.interactorObject is UnityEngine.XR.Interaction.Toolkit.Interactors.XRPokeInteractor)
+        {
+            isFollowing = false;
+            freeze = false;
+        }
+    }
+    
+    public void Freeze(BaseInteractionEventArgs hover)
+    {
+        Debug.Log("Freeze called❄️");
+        if (hover.interactorObject is UnityEngine.XR.Interaction.Toolkit.Interactors.XRPokeInteractor)
+        {
+            freeze = true;
+        }
+    }
+
+    void Update()
+    {
+        if(freeze)
+            return;
+        
+        if (isFollowing)
+        {
+            Vector3 localTargetPosition = visualTarget.InverseTransformPoint(pokeAttachTransform.position + offset);
+            Vector3 constrainedLocalTargetPosition = Vector3.Project(localTargetPosition, localAxis);
+
+
+            visualTarget.position = visualTarget.TransformPoint(constrainedLocalTargetPosition);
+        }
+        else
+        {
+            visualTarget.localPosition = Vector3.Lerp(visualTarget.localPosition, initialLocalPos, Time.deltaTime * resetSpeed);
+        }
+    }
+}

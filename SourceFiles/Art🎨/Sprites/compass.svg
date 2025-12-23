@@ -1,0 +1,21 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5A623;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#F58B23;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F57223;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- White background -->
+  <rect width="200" height="200" fill="white"/>
+  
+  <!-- Compass Icon -->
+  <circle cx="100" cy="100" r="65" fill="none" stroke="url(#orangeGradient)" stroke-width="8"/>
+  <circle cx="100" cy="100" r="50" fill="url(#orangeGradient)" opacity="0.2"/>
+  
+  <!-- Compass needle -->
+  <path d="M 100 100 L 85 70 L 100 50 L 115 70 Z" fill="url(#orangeGradient)"/>
+  <path d="M 100 100 L 85 130 L 100 150 L 115 130 Z" fill="url(#orangeGradient)" opacity="0.5"/>
+  <circle cx="100" cy="100" r="8" fill="url(#orangeGradient)"/>
+</svg>
