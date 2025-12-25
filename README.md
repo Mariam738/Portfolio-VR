@@ -9,12 +9,15 @@ https://github.com/user-attachments/assets/eae9998d-f3ce-406e-8ffd-e145e70425ca
 
  ### Interactive Mode 🎮
 * Play Piano Feature 🎹🎶
+  
 https://github.com/user-attachments/assets/d85066c4-f0e8-4c63-b115-f3e0fac4ae9e
 
 * Draw Your Art 🎨🖌️
+  
 https://github.com/user-attachments/assets/b1741491-52d4-42d9-b064-375b1b3481a5
 
 * Teleport 🕳️🌌
+  
 https://github.com/user-attachments/assets/810a7ab4-5cf6-4b38-9890-867cf26ba822
 
 
