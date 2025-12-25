@@ -5,7 +5,7 @@
  ### Tour-guided Mode 🗺️🕵🏼‍♀️
 
 
-<video src="[video.mp4](https://github.com/user-attachments/assets/eae9998d-f3ce-406e-8ffd-e145e70425ca)" width="600" height="400" controls> </video>
+<video src="https://github.com/user-attachments/assets/eae9998d-f3ce-406e-8ffd-e145e70425ca" width="600" height="400" controls> </video>
 
  ### Interactive Mode 🎮
 * Play Piano Feature 🎹🎶
